@@ -43,7 +43,7 @@ Now, you'll want a local copy of this repo.
  Clone the repo from github and then go to proper subdirectory
 
 ```javascript
-git clone 
+git clone https://github.com/durguupi/terraform_aws.git
 
 cd basic_single_node_webserver
 
