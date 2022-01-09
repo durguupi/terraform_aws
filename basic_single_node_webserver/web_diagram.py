@@ -8,8 +8,8 @@ graph_attr = {
     "fontsize": "35",
     # "bgcolor": "lightgray",
     "layout" : "neato",
-    "margin" : "0.8,0.4",
-    
+    "margin" : "-0.8,-1.2",
+
 }
 
 # This attributes are for the cluster where we are defining AWS cloud
