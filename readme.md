@@ -11,8 +11,6 @@ Also additionally we will use python Diagram module to draw the cloud system arc
 
 ## 🧰 Languages and Tools
 
-&nbsp;&nbsp;&nbsp;&nbsp;
-
 ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)  ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
@@ -103,8 +101,6 @@ In this project we will build simple Webserver using Terraform. With the help of
 
 ## Example  2 - 🎉Simple Webserver using Pulumi ![Deployed](https://get.pulumi.com/new/button.svg)
 
-&nbsp;&nbsp;&nbsp;&nbsp;
-
 In this project we will build simple Webserver using Pulumi. With the help of Pulumi and user_data we will install HTTP server with custom page. After successful deployment, we should be able to visit VM public IP address with our web browser and expect the simple webpage content. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -113,8 +109,6 @@ In this project we will build simple Webserver using Pulumi. With the help of Pu
 
 
 ## Example  3 - 📚AWS VPC with Pubic Webserver and Private Instance
-
-&nbsp;&nbsp;&nbsp;&nbsp;
 
 In this project we will build custom VPC with Public and Private Subnets. With the help of Terraform and user_data we will install HTTP server with custom page in Public subnet. We will create instance in private subnet and try to ping webserver in public subnet. 
 After successful terraform apply, we should be able to visit VM present in public subnet using public IP address with our web browser and expect the simple webpage content. Using SSH-Proxy Command we will be able to login to private instance and view the custom log we created using user_data as well as ping webserver to check connectitvity. 
