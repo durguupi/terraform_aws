@@ -115,7 +115,7 @@ After successful terraform apply, we should be able to visit VM present in publi
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-![AWS VPC with Pubic Webserver and Private Instance](vpc_pub_priv_web/scripts/vpc_with_pubic_webserver_and_private_instance.png)
+![AWS VPC with Pubic Webserver and Private Instance](aws_vpc/vpc_pub_priv_web/scripts/vpc_with_pubic_webserver_and_private_instance.png)
 
 
 
