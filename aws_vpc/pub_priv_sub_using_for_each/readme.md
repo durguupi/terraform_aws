@@ -4,9 +4,9 @@
 
 
 
-## 💥AWS VPC with Public and Private Subnet in each Availablity Zone created using Count
+## 🎇AWS VPC with Public and Private Subnet in each Availablity Zone created using FOR_EACH
 
-In this project we will build custom VPC with Public and Private Subnets in each Availablity zone without duplicating the code. To avoid duplicating the code, we are making use of Terraform meta-arguments and built-in functions. Specifically, we are using `count` and `cidrsubnet`. The `count`, will generate as many copies of your subnet as you want. `cidrsubnet` calculates a subnet address within given IP network address prefix.
+In this project we will build custom VPC with Public and Private Subnets in each Availablity zone without duplicating the code. To avoid duplicating the code, we are making use of Terraform meta-arguments and built-in functions. Specifically, we are using `for_each` and `cidrsubnet`. The `for_each`, will generate as many copies of your subnet as you want. `cidrsubnet` calculates a subnet address within given IP network address prefix.
 
 ```javascript
 
@@ -28,6 +28,17 @@ variable "iprange" {
 output "cidrsubnet" {
   value = "${cidrsubnet(var.iprange,8,1)}"  ==> # Returns 10.0.1.0/24 as CIDR range
 }
+
+# Here idx refers to index,in this example we have for 4 AZ in region  so we have index starting from 0,1,2,3 and it corresponds to name of AZ. So for each AZ present we will create Public and Private Subnet. 
+
+{ for idx, az_name in local.az_names : cidrsubnet(var.base_cidr, 8, idx) => az_name }
+{
+  "10.0.0.0/24" = "us-west-2a"
+  "10.0.1.0/24" = "us-west-2b"
+  "10.0.2.0/24" = "us-west-2c"
+  "10.0.3.0/24" = "us-west-2d"
+}
+
 ```
 
 ## ✨Use of python Diagram to draw the Infrastructue. 
@@ -35,7 +46,7 @@ output "cidrsubnet" {
 Also we will use python Diagram module to draw the cloud system 
 architecture in Python code. Below is the Diagram created using python
 
-![](scripts/vpc_with_public_and_private_subnet_in_each_az_using_count.png)
+![](scripts/vpc_with_public_and_private_subnet_in_each_az_using_for_each.png)
 
 
 ## 🧰 Languages and Tools
@@ -64,7 +75,7 @@ Now, you'll want a local copy of this repo.
 ```javascript
 git clone https://github.com/durguupi/terraform_aws.git
 
-cd pub_priv_sub_using_count
+cd pub_priv_sub_using_for_each
 
 ```
 
@@ -92,7 +103,7 @@ terraform destroy
 ```
 ### Sample ScreenShots
 
-[<img src="screenshots/output1.png" width="800" height="500"/>](screenshots/output1.png) &nbsp;&nbsp;&nbsp;&nbsp; [<img src="screenshots/output2.png" width="1200" height="500"/>](screenshots/output2.png)
+[<img src="screenshots/output2.png" width="800" height="500"/>](screenshots/output2.png) &nbsp;&nbsp;&nbsp;&nbsp; [<img src="screenshots/output1.png" width="1200" height="500"/>](screenshots/output1.png)
 
 ## 🎨Creating Infrastructure Diagram using python
 
@@ -132,7 +143,7 @@ https://graphviz.org/doc/info/attrs.html
 
 https://www.terraform.io/language/functions/cidrsubnet
 
-https://www.terraform.io/language/meta-arguments/count
+https://www.terraform.io/language/meta-arguments/for_each
 
 ## License  [![GitHub license](https://img.shields.io/github/license/Naereen/badges.svg)](https://github.com/Naereen/badges/blob/master/LICENSE)
 
