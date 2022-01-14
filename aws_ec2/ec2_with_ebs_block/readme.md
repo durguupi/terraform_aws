@@ -42,7 +42,7 @@ Now, you'll want a local copy of this repo.
 ```javascript
 git clone https://github.com/durguupi/terraform_aws.git
 
-cd ec2_with_ebs_block
+cd aws_ec2/ec2_with_ebs_block
 
 ```
 
