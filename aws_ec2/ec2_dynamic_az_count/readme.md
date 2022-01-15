@@ -8,7 +8,7 @@
 In this project we will dynamically distribute EC2 instances across the number of availability zones present in region using `count` meta-argument of terraform. The `count`, will generate as many copies of EC2 instances based on number of instances declared. 
 Understanding the `count.index` logic used here using below example
 
-```json
+```javascript
 // local.az_names gives us list of AZ with index from 0 ,1 , 2. 
 
 >local.az_names
