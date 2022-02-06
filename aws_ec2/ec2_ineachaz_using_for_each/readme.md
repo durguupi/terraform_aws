@@ -102,7 +102,7 @@ terraform destroy
 ```
 ### Sample ScreenShots
 
-[<img src="screenshots/output1.png" width="1000" height="500"/>](screenshots/output1.png) &nbsp;&nbsp;&nbsp;&nbsp; [<img src="screenshots/output2.png" width="500" height="500"/>](screenshots/output2.png)
+[<img src="screenshots/output1.png" width="800" height="800"/>](screenshots/output1.png) &nbsp;&nbsp;&nbsp;&nbsp; [<img src="screenshots/output2.png" width="500" height="500"/>](screenshots/output2.png)
 
 ## 🎨Creating Infrastructure Diagram using python
 
